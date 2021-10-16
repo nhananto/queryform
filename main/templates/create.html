@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Create a Post </title>
+</head>
+
+<body>
+    <h1>Create a Post </h1>
+    <form method="post" action="{% url 'result' %}">
+        {% csrf_token %}
+        Title: <input type="text" name="title" /><br />
+        Content: <br />
+        <textarea cols="35" rows="8" name="content"></textarea>
+        <br/>
+
+        <input class="a" type="radio" id="male" name="sex" value="male">
+        <label for="male">Male</label>
+        <input class="b" type="radio" id="female" name="sex" value="female">
+        <label for="female">Female</label>
+        
+        <!-- <input type="hidden" name="veh" value="0" /> -->
+        <input type="hidden" name="vehicle1" value="0" />
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="fever">
+        <label for="vehicle1" class="checktext">Fever</label><br>
+        
+        <input type="hidden" name="vehicle2" value="0" />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="cough">
+        <label for="vehicle2" class="checktext">Dry Cough</label><br>
+        
+        <input type="hidden" name="vehicle3" value="0" />
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="sore">
+        <label for="vehicle3" class="checktext">Sore Throat</label><br>
+        
+
+        <!-- <input type="checkbox" id="vehicle4" name="vehicle4" value="vehicle4">
+        <label for="vehicle4" class="checktext">Diarrhea</label><br> -->
+        <input type="submit" value="Post" />
+    </form>
+</body>
+
+</html>
